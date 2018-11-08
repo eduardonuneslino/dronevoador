@@ -6,7 +6,7 @@
 
 	$message = '<img src="https://uploaddeimagens.com.br/images/001/713/195/original/copel.png?1541629564" width="200"/> <br><br>';
 	$message .= 'Por favor, clique no link abaixo para confirmar seu cadastro no Copel+. <br><br>';
-    $message .= '<a href="http://172.30.50.101/copelmais/php/confirmar-cadastro.php?code='.$codigo.'">Confirmar E-mail</a>';
+    $message .= '<a href="http://172.30.55.179/copelmais/php/confirmar-cadastro.php?code='.$codigo.'">Confirmar E-mail</a>';
 
 	$mail= new PHPMailer;
 	$mail->IsSMTP(); 
