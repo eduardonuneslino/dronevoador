@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="../css/materializecss.css">
+<link rel="stylesheet" href="../css/materializecss.css">
 
 
 <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
@@ -7,11 +7,14 @@
 
 <script src='../js/jquery.mask.js'></script>
 
+
+<link rel="stylesheet" href="../css/usuario.css">
+
 <div style="margin-left: 10px; margin-right: 10px; margin-top: 20px;">
 
-     <div class="row">
+     <div class="row" style="text-align: center;">
       <form class="col s12" class="formulario-cadastrar-projeto">
-
+      
       		<div class="row" style="margin-bottom: 50px;">
 		        <center>
 		        	<div style="border-radius: 50%; background-image: url('../images/user-no-image.png'); width: 110px; height: 110px; border: solid 4px #DDD; background-size: contain;"></div>
@@ -22,37 +25,71 @@
 		        </center>
 		    </div>
        
-          	<div style="float: left; width: 50%; ">
+          	<div style="display:inline-block; width: 100%;  max-width: 400px;">
 		        <div class="input-field col s12 campo-obrigatorio">
-		          <input id="tNomeUsuario" type="text" class="validate" autofocus>
-		          <label for="last_name">Nome*</label>
+		          <input id="tNomeUsuario" type="text" class="validate" style="margin-bottom: 5px;" autofocus>
+		          <label for="last_name">Nome Completo*</label>
+		          <span class="helper-text" data-error="" data-success="" >Campo Obrigatório</span>
+		        </div>
+		    </div>
+
+		    <div style="display:inline-block; width: 100%; max-width: 400px;">
+		        <div class="input-field col s12 campo-obrigatorio">
+		          <input id="tNomeUsuario" type="text" class="validate" style="margin-bottom: 5px;" autofocus>
+		          <label for="last_name">Nome de Usuário*</label>
 		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
 		        </div>
 		    </div>
 
-		    <div style="float: left; width: 50%;">
+		    <div style="display:inline-block; width: 100%; max-width: 400px;">
 		        <div class="input-field col s12 campo-obrigatorio">
-		          <input id="tNomeUsuario" type="text" class="validate" autofocus>
-		          <label for="last_name">Nome*</label>
+		          <input id="tTelefone" type="text" class="validate" style="margin-bottom: 5px;" autofocus>
+		          <label for="last_name">Telefone Celular</label>
 		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
 		        </div>
 		    </div>
 
-		    <div style="float: left; width: 100%;">
-		        <div class="input-field col s6 campo-obrigatorio">
-		          <input id="tTelefone" type="text" class="validate" autofocus>
-		          <label for="last_name">Telefone*</label>
+		    <div style="display:inline-block; width: 100%; max-width: 400px;">
+		        <div class="input-field col s12 campo-obrigatorio">
+		          <input id="tEmail" type="email" class="validate" style="margin-bottom: 5px;" autofocus>
+		          <label for="last_name">Data de Nascimento</label>
 		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
 		        </div>
+		    </div>
 
-		        <div class="input-field col s6 campo-obrigatorio">
+		    <div style="display:inline-block; width: 100%; max-width: 400px; vertical-align: top; margin-bottom: 10px; ">
+
+		    	<table style="padding-top: 25px;">
+		    		<tr>
+		    			<td style="text-align: left;">
+		    				<label for="last_name">&nbsp;&nbsp;&nbsp;Gênero</label><br>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>
+		    				<input name="group1" type="radio" id="test1" />
+			      			<label for="test1">Masculino</label>
+		    			</td>
+		    	
+		    			<td>
+		    				<input name="group1" type="radio" id="test2" />
+			      			<label for="test2">Feminino</label>
+		    			</td>
+		    		</tr>
+		    	</table>
+			     
+		    </div>
+
+		    <div style="display:inline-block; width: 100%; max-width: 400px;">
+		        <div class="input-field col s12 campo-obrigatorio">
 		          <input id="tEmail" type="email" class="validate" autofocus>
-		          <label for="last_name">email*</label>
-		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
+		          <label for="last_name">Profissão ou ocupação na empresa que trabalha</label>
+		          <span class="helper-text">Ex: Estudante, Analista/Programador, Estagiário, etc.</span>
 		        </div>
 		    </div>
 
        </form>
+
  
 
 
@@ -67,6 +104,20 @@ $(document).ready(function(){
 	$("#labelUsuarioCpf").html("CPF: " + window.sessionStorage.getItem("cpf"));
 
 	$("#tNomeUsuario").val(window.sessionStorage.getItem("nome"));
+
+
+	$('link[rel=stylesheet]').each(function(){
+		if($(this).attr("href").indexOf("material") > 0){
+			$(this).remove();
+		}
+	});
+
+	$('head').append('<link rel="stylesheet" href="../css/materialize/materialize-0.100.2.css" type="text/css" />');
+	$('head').append('<script src="../js/materialize/materialize-0.100.2.js"><//script>');
+
+	$('head').append('<link rel="stylesheet" href="../css/bibliotecas/materialicons.css" />');
+	$('head').append('<link rel="stylesheet" href="../css/bibliotecas/material.cyan-light_blue.min.css" />');
+
 
 });
 
