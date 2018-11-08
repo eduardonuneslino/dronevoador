@@ -1,0 +1,756 @@
+
+<style type="text/css">
+
+
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+
+.tabs {
+    z-index: 15px;
+    position: relative;
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: 2px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.tabs-header {
+    position: relative;
+    background: #4285F4;
+    overflow: hidden;
+}
+
+.tabs-header .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #F4B142;
+    width: auto;
+    height: 2px;
+    transition: 0.3s ease;
+}
+
+.tabs-header ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tabs-header li {
+    transition: 0.3s ease;
+}
+
+.tabs-header a {
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.tabs-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #4285F4;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    color: #FFFFFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tabs-nav:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 0 20px 10px #4285F4;
+}
+
+.tabs-nav i {
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.tabs-content {
+    position: relative;
+    padding: 15px 20px;
+    transition: 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.tabs-content:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    box-shadow: 0 0 20px 10px #FFFFFF;
+}
+
+.tabs-content .tab {
+    display: none;
+}
+
+.tabs-content .tab.active {
+    display: block;
+}
+
+[ripple] {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+[ripple] .ripple {
+    position: absolute;
+    background: #FFFFFF;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    -webkit-animation: ripple 1.6s;
+    animation: ripple 1.6s;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+        opacity: 0;
+    }
+}
+</style>
+
+<div class="tabs" style="width: 100%;">
+    <div class="tabs-header" style="width: 100%;">
+        <div class="border" style="left: 0px; width: 78px;"></div>
+        <ul style="width: 1000px;">
+            <li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">Ideathon</a></li>
+            <li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">Business Lab</a></li>
+            <li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#FFF">Fase 3</a></li>
+        </ul>
+        <nav class="tabs-nav menu-pontuacao">
+
+        Pontuação Atual: &nbsp; <label style="font-size: 16px;"><b>56 pontos</b></label>
+
+        </nav>
+    </div>
+    
+    <div class="tabs-content" style="height: 500px; overflow-y: scroll;">
+        <div tab-id="1" class="tab active" style="height: 200px; overflow-y: scroll;">
+
+            <div class="cardCiclo card-with-avatar" style="float: left;">
+                <div class="card-primary">
+                  <div class="card-title">Título do Ciclo</div>
+                  <div class="card-subtitle">Subtítulo do ciclo</div>
+                </div>
+                <p class="supporting-text">
+                  Descrição...
+                </p>
+                <div class="card-actions" style="background-color: black;">
+                    <table width="100%" cellspacing="7">
+                        <tr>
+                          <td width="33%">
+                              <center><img src="images/unlock.png" width="22"></center>
+                          </td>
+                          <td width="33%">
+                              <center><img src="images/check.png" width="25"></center>
+                          </td>
+                          <td width="33%">
+                              <center>
+
+                              <label style="font-size: 16px; color: white;">60&nbsp;pontos</label>
+
+                              </center>
+                          </td>
+                          
+                        </tr>
+                      </table>
+                </div>
+              </div>
+
+              <div class="cardCiclo card-with-avatar" style="float: left;">
+                <div class="card-primary">
+                  <div class="card-title">Título do Ciclo</div>
+                  <div class="card-subtitle">Subtítulo do ciclo</div>
+                </div>
+                <p class="supporting-text">
+                  Descrição...
+                </p>
+                <div class="card-actions" style="background-color: black;">
+                    <table width="100%" cellspacing="7">
+                        <tr>
+                          <td width="33%">
+                              <center><img src="images/lock.png" width="16"></center>
+                          </td>
+                          <td width="33%">
+                              <center><img src="images/not.png" width="25"></center>
+                          </td>
+                          <td width="33%">
+                              <center>
+
+                              <label style="font-size: 16px; color: white;">70&nbsp;pontos</label>
+
+                              </center>
+                          </td>
+                          
+                        </tr>
+                      </table>
+                </div>
+              </div>
+
+
+
+        </div>
+        <div tab-id="2" class="tab">
+
+
+
+        </div>
+        <div tab-id="3" class="tab">
+
+
+
+        </div>
+        
+
+    </div>
+</div>
+
+
+
+<style type="text/css">
+
+.cardCiclo{
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  margin: 5px;
+  width: 200px;
+}
+
+.cardFase {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  margin: 5px;
+}
+
+.cardFase,
+.supporting-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.25rem;
+}
+
+.supporting-text {
+  padding: 0px 24px;
+}
+
+.card-primary {
+  position: relative;
+  padding: 24px 24px 16px;
+}
+
+.card-with-avatar .card-title,
+.card-with-avatar .card-subtitle {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.card-title {
+  font-weight: 500;
+}
+
+.card-avatar {
+  position: absolute;
+  background: #bdbdbd;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.card-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card-actions a:first-child {
+  margin-left: 8px;
+}
+.card-actions a {
+  margin: 0 8px 0 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0 8px;
+  height: 36px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #2196F3;
+}
+
+.card-media {
+  background-color: #bdbdbd;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10.938rem;
+  margin-bottom: 16px;
+}
+
+
+</style>
+
+
+<div style="position: absolute; bottom: 0; height: 50%; background-color: gray; width: 100%; overflow-y: scroll; border-top: solid 3px #666;">
+  
+
+  
+<div style="padding: 20px;" >
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+       <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+       <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      <div class="cardFase card-with-avatar" style="float: left;">
+        <div class="card-primary">
+          <div class="card-title">Título do Passo</div>
+          <div class="card-subtitle">Subtítulo do Passo</div>
+        </div>
+        <p class="supporting-text">
+          Descrição...
+        </p>
+        <div class="card-actions">
+          <a>Detalhes</a>
+          <a>Entregas</a>
+          <a>10 pontos</a>
+        </div>
+      </div>
+
+      
+
+
+
+
+</div>
+
+
+<script type="text/javascript">
+
+
+
+if(seDesktop())
+{
+  $(".menu-pontuacao").html('Pontuação Atual: &nbsp; <label style="font-size: 16px;"><b>56 pontos</b></label>');
+}
+else
+{
+  $(".menu-pontuacao").html('<label style="font-size: 16px;"><b>56 p.</b></label>');
+}
+
+
+//var largura = $(".classFases").width();
+//alert(largura);
+
+//$(".tab-largura").css("width", largura+"px");
+  
+  // Intial Border Position
+var activePos = $(".tabs-header .active").position();
+
+// Change Position
+function changePos() {
+    // Up<a href="https://www.jqueryscript.net/time-clock/">date</a> Position
+    activePos = $(".tabs-header .active").position();
+
+    // Change Position & Width
+    $(".border")
+        .stop()
+        .css({
+            left: activePos.left,
+            width: $(".tabs-header .active").width()
+        });
+}
+
+changePos();
+
+
+
+
+// Change Tab
+function changeTab() {
+    var getTabId = $(".tabs-header .active a").attr("tab-id");
+
+    // Remove Active State
+    $(".tab")
+        .stop()
+        .fadeOut(300, function() {
+            // Remove Class
+            $(this).removeClass("active");
+        })
+        .hide();
+
+    $(".tab[tab-id=" + getTabId + "]")
+        .stop()
+        .fadeIn(300, function() {
+            // Add Class
+            $(this).addClass("active");
+
+            // Animate Height
+            animateTabHeight();
+        });
+}
+
+// Tabs
+$(".tabs-header a").on("click", function(e) {
+    e.preventDefault();
+
+    // Tab Id
+    var tabId = $(this).attr("tab-id");
+
+    // Remove Active State
+    $(".tabs-header a")
+        .stop()
+        .parent()
+        .removeClass("active");
+
+    // Add Active State
+    $(this)
+        .stop()
+        .parent()
+        .addClass("active");
+
+    changePos();
+
+    // Update Current Itm
+    tabCurrentItem = tabItems.filter(".active");
+
+    // Remove Active State
+    $(".tab")
+        .stop()
+        .fadeOut(300, function() {
+            // Remove Class
+            $(this).removeClass("active");
+        })
+        .hide();
+
+    // Add Active State
+    $('.tab[tab-id="' + tabId + '"]')
+        .stop()
+        .fadeIn(300, function() {
+            // Add Class
+            $(this).addClass("active");
+
+            // Animate Height
+            animateTabHeight();
+        });
+});
+
+// Tab Items
+var tabItems = $(".tabs-header ul li");
+
+// Tab Current Item
+var tabCurrentItem = tabItems.filter(".active");
+
+// Next Button
+$("#next").on("click", function(e) {
+    e.preventDefault();
+
+    var nextItem = tabCurrentItem.next();
+
+    tabCurrentItem.removeClass("active");
+
+    if (nextItem.length) {
+        tabCurrentItem = nextItem.addClass("active");
+    } else {
+        tabCurrentItem = tabItems.first().addClass("active");
+    }
+
+    changePos();
+    changeTab();
+});
+
+// Prev Button
+$("#prev").on("click", function(e) {
+    e.preventDefault();
+
+    var prevItem = tabCurrentItem.prev();
+
+    tabCurrentItem.removeClass("active");
+
+    if (prevItem.length) {
+        tabCurrentItem = prevItem.addClass("active");
+    } else {
+        tabCurrentItem = tabItems.last().addClass("active");
+    }
+
+    changePos();
+    changeTab();
+});
+
+$("[ripple]").on("click", function(e) {
+    var rippleDiv = $('<div class="ripple" />'),
+        rippleOffset = $(this).offset(),
+        rippleY = e.pageY - rippleOffset.top,
+        rippleX = e.pageX - rippleOffset.left,
+        ripple = $(".ripple");
+
+    rippleDiv
+        .css({
+            top: rippleY - ripple.height() / 2,
+            left: rippleX - ripple.width() / 2,
+            background: $(this).attr("ripple-color")
+        })
+        .appendTo($(this));
+
+    window.setTimeout(function() {
+        rippleDiv.remove();
+    }, 1500);
+});
+
+</script>

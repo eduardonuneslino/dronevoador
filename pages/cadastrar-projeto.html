@@ -1,0 +1,116 @@
+ <link rel="stylesheet" href="../css/materializecss.css">
+
+<link rel="stylesheet" href="../css/index.css">
+<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
+
+		
+<link rel="stylesheet" href="css/materialize-index.css">
+<script type="text/javascript" src="../js/cadastrar-projeto.js"></script>
+
+<style type="text/css">
+	
+	.not-active {
+	  	pointer-events: none;
+	  	cursor: default;
+	  	text-decoration: none;
+	  	color: black;
+	}
+</style>
+
+
+<div id="corpoCadastrarProjeto" style="margin-left: 10px; margin-right: 10px; margin-top: 20px; display: none;">
+     <div class="row">
+      <form class="col s12" class="formulario-cadastrar-projeto">
+
+      		<input type="hidden" id="tUsuarioEmail" name="tUsuarioEmail" />
+
+          	<div class="row">
+		        <div class="input-field col s12">
+		          <input id="tNomeProjeto" name="tNomeProjeto" type="text" class="validate tema" autofocus>
+		          <label for="last_name">Nome do Projeto</label>
+		        </div>
+		    </div>
+
+        	<div class="row">
+		        <div class="input-field col s12">
+		          <textarea id="tDescricao" name="tDescricao" class="materialize-textarea tema"></textarea>
+		          <label for="textarea1">Descrição</label>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="input-field col s12">
+		          <input id="tOrganizacao" name="tOrganizacao" type="text" class="validate tema">
+		          <label for="last_name">Organização</label>
+		        </div>
+		    </div>
+
+			<div class="row">
+		        <div class="input-field col s12">
+		          <button class="btn waves-effect waves-light teal" id="bGravarProjeto">Gravar Projeto</button>
+		        </div>
+		    </div>
+
+       </form>
+</div>
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+	$("#tNomeProjeto").focus();
+
+	$("#bGravarProjeto").click(function(){
+
+		//alert(window.sessionStorage.getItem("email"));
+		$("#tUsuarioEmail").val(window.sessionStorage.getItem("email"));
+
+		fLocalComunicaServidor('', 'cadastrar-projeto');
+		return false;
+
+	});
+
+	$('link[rel=stylesheet]').each(function(){
+		if($(this).attr("href").indexOf("material") > 0){
+			$(this).remove();
+		}
+	});
+
+	$('head').append('<link rel="stylesheet" href="../css/materialize/materialize-0.100.2.css" type="text/css" />');
+	$('head').append('<script src="../js/materialize/materialize-0.100.2.js"><//script>');
+
+	$('head').append('<link rel="stylesheet" href="../css/bibliotecas/materialicons.css" />');
+	$('head').append('<link rel="stylesheet" href="../css/bibliotecas/material.cyan-light_blue.min.css" />');
+
+	setTimeout(function(){
+		 $("#corpoCadastrarProjeto").css("display", "block");
+		 $("#tNomeProjeto").focus();
+	}, 500);
+});
+
+
+function fLocalComunicaServidor(formulario, file){
+
+  var dados = $("form").serialize();
+
+  $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "../php/"+file+".php",
+    data: dados,
+    success:function(array){
+      if(array["funcao"] == "cadastrar-projeto"){
+        if(array["status"] == "s"){
+          alert("projeto cadastrado");
+          $("#tNomeProjeto").val("");
+          $("#tDescricao").val("");
+          $("#tOrganizacao").val("");
+          $("#tNomeProjeto").focus();
+        }
+      }
+    }
+  });
+}
+
+</script>

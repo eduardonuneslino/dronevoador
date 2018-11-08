@@ -1,0 +1,78 @@
+  <link rel="stylesheet" href="../css/materializecss.css">
+
+
+<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script>
+
+
+<script src='../js/jquery.mask.js'></script>
+
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 20px;">
+
+     <div class="row">
+      <form class="col s12" class="formulario-cadastrar-projeto">
+
+      		<div class="row">
+		        <center>
+		        	<div style="border-radius: 50%; background-image: url('../images/user-no-image.png'); width: 110px; height: 110px; border: solid 4px #DDD; background-size: contain;"></div>
+		        	<br>
+		        	<label style="font-size: 16px; color: #444; font-weight: bold;" id="labelUsuarioEmail"></label>
+		        	<br>
+		        	<label style="font-size: 14px; color: #444;" id="labelUsuarioCpf"></label>
+		        </center>
+		    </div>
+       
+          	<div class="row">
+		        <div class="input-field col s12 campo-obrigatorio">
+		          <input id="tNomeUsuario" type="text" class="validate" autofocus>
+		          <label for="last_name">Nome*</label>
+		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		        <div class="input-field col s6 campo-obrigatorio">
+		          <input id="tTelefone" type="text" class="validate" autofocus>
+		          <label for="last_name">Telefone*</label>
+		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
+		        </div>
+
+		        <div class="input-field col s6 campo-obrigatorio">
+		          <input id="tEmail" type="email" class="validate" autofocus>
+		          <label for="last_name">email*</label>
+		          <span class="helper-text" data-error="" data-success="">Campo Obrigatório</span>
+		        </div>
+		    </div>
+
+		    <div class="row">
+		       
+		        
+		     
+		    </div>
+
+   
+
+       </form>
+ 
+
+
+</div>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	fLocalInsereMascara();
+	$("#labelUsuarioEmail").html(window.sessionStorage.getItem("email"));
+	$("#labelUsuarioCpf").html("CPF: " + window.sessionStorage.getItem("cpf"));
+
+	$("#tNomeUsuario").val(window.sessionStorage.getItem("nome"));
+
+});
+
+
+function fLocalInsereMascara(){
+	$('#tTelefone').mask('(00) 0 0000-0000');
+}
+
+</script>

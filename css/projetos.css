@@ -1,0 +1,167 @@
+
+
+/******** CARROSSEL ********/
+
+.carousel {
+  border: none;
+  padding-top: 10px;
+  background-color: #EEE;
+}
+
+.carousel__cards {
+  list-style: none;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-y:hidden;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.carousel__card {
+  width: 350px;
+  background: white;
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  border:solid 1px #EEE;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+
+
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.carousel__card:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+  transform: scale(1.005);
+  position: relative;
+}
+
+
+
+
+.scale-up {
+  transform: scale(1.001);
+  transition: transform 0.5s ease-in-out;
+}
+.scale-down {
+  transform: scale(0.999);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.previous{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color:rgba(255,255,255,0.2);
+    left: 5px;
+    top: 42%;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 999999;
+}
+
+
+.next{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color:rgba(255,255,255,0.2);
+    right: 5px;
+    top: 42%;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 999999;
+}
+
+.arrow {
+  fill: #294E55;
+}
+
+
+/******** CARD ********/
+
+
+
+.card_cabecalho{
+  height: 106px; 
+  width: 100%; 
+  background: url('../images/campanha-copel-mais-2018.png'); 
+  background-size: contain; 
+  text-align: left; 
+  border-radius: 5px 5px 0 0;
+}
+
+.card-participante-nome{
+  background-color: #EEE; 
+  border-radius: 20px; 
+  padding-left: 10px;
+}
+
+.card-reveal-add-user{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+
+}
+
+.card-menu-rodape{
+  width: 100%; 
+  height: 50px; 
+  border-top: solid 1px #EEE;
+}
+
+.card-header-participantes{
+  width: 100%;  display:                 flex; display: -webkit-flex; flex-wrap:               wrap;
+  -webkit-flex-wrap:       wrap;        
+  justify-content:         center;
+  -webkit-justify-content: center; 
+  margin-bottom: 15px;
+}
+
+.title-card-participantes{
+  font-size: 20px;
+}
+
+.card_cabecalho-participantes{
+  margin-top: 15px;
+  width: 100%; 
+   
+  padding-top: 5px; 
+  padding-bottom: 5px;
+}
+
+.card-titulo-campanha{
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-projeto-descricao{
+  width: 100%;  padding-bottom: 5px; overflow-y: scroll; height: 130px; -webkit-box-shadow: -2px 28px 22px -29px rgba(220,220,220,1);
+-moz-box-shadow: -2px 28px 22px -29px rgba(220,220,220,1);
+box-shadow: -2px 28px 22px -29px rgba(220,220,220,1); margin-bottom: 25px;
+}
+
+.card-projeto-descricao-conteudo{
+ text-align: justify; padding-left: 30px; padding-right: 30px;white-space: normal !important;
+}
+
+
+

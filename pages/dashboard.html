@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Copel +</title>
+
+        <!-- Metadados -->
+              <meta charset="utf-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+              <!-- Add to homescreen for Chrome on Android -->
+              <meta name="mobile-web-app-capable" content="yes"> 
+              <!-- Add to homescreen for Safari on iOS -->
+              <meta name="apple-mobile-web-app-capable" content="yes">
+              <meta name="apple-mobile-web-app-status-bar-style" content="black">
+              <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+              <!-- Tile icon for Win8 (144x144 + tile color) -->
+              <meta name="msapplication-TileImage" content="../images/touch/ms-touch-icon-144x144-precomposed.png">
+              <meta name="msapplication-TileColor" content="#3372DF">
+
+
+        <!-- Links -->
+              <link rel="shortcut icon" href="../images/copel-icon.ico">
+              <link rel="stylesheet" href="../css/bibliotecas/style.css">
+              <link rel="stylesheet" href="../css/bibliotecas/materialicons.css">
+              <link rel="stylesheet" href="../css/bibliotecas/material.cyan-light_blue.min.css">
+              <link rel="stylesheet" href="../css/dashboard.css">
+
+              <!-- Add to homescreen for Safari on iOS -->
+              <link rel="apple-touch-icon-precomposed" href="../images/ios-desktop.png">
+
+              <style type="text/css">
+                  .demo-layout .demo-navigation .mdl-navigation__link{
+                      color: black !important;
+                  }
+                  .mdl-color-text--blue-grey-400{
+                      color: black !important;
+                  }
+
+                  .classCampanha{
+                    height: 100%;
+                    background-color: #EEE;
+                  }
+
+
+               
+              </style>
+
+              
+              <link rel="stylesheet" type="text/css" href="../css/bibliotecas/menu-animacao.css">
+              <link rel="stylesheet" type="text/css" href="../css/bibliotecas/card-campanha.css">
+              <link rel="stylesheet" type="text/css" href="../css/bibliotecas/modal.css">
+
+              <link rel="stylesheet" type="text/css" href="../css/bibliotecas/menu-user-opcoes.css">
+
+
+        <!-- Scripts -->
+              
+              <script type="text/javascript" src="../js/bibliotecas/jquery-3.3.1.js"></script>
+              <script type="text/javascript" src="../js/inicio.js"></script>
+              <script src="../js/material.min.js"></script>
+    </head>
+
+    <body>
+
+
+        <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+            <!-- cabeçalho -->
+            <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title" id="TituloMenuSuperior"></span>
+                    <div class="mdl-layout-spacer"></div>
+
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="menu-projeto">
+                      <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="menu-projeto">
+                        <li class="mdl-menu__item" onclick="fLocalCadastrarProjeto();">Cadastrar Projeto</li>
+                    </ul>
+                   
+                  
+                </div>
+            </header>
+
+
+            <!-- Menu -->
+            <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+                <header class="demo-drawer-header" style="padding: 0px !important;">
+                    
+                    <div style="text-align: center; padding-bottom: 25px; border-bottom: solid 1px #DDD; ">
+                        <img src="../images/copel.png" width="145" />
+                    </div>
+
+                    <div style="cursor: pointer; background-color: #EEE; padding-left: 8px; padding-top: 8px; padding-bottom: 8px; border-bottom: solid 1px #DDD;" onclick="fLocalListarUsuario(); ">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="1%">
+                            <div style="margin-right: 8px; border-radius: 50%; background-image: url('../images/user-no-image.png'); width: 60px; height: 60px; border: solid 4px #DDD; background-size: contain;"></div>
+                          </td>
+                          <td>
+                            <label id="labelNomeCompleto" style="cursor: pointer; font-size: 15px !important; color: black; font-weight: bold; font-family: 'Roboto','Helvetica','Arial',sans-serif !important; color: #333 !important;">Eduardo Lino</label><br>
+                            <!--<label style="font-size: 11px; color: #333 !important; font-family: arial !important;"></label>-->
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    
+
+
+                </header>
+                <nav class="demo-navigation mdl-navigation nav-menu-opcoes">
+        
+                    <a class="menu-opcoes" style="cursor: pointer; font-family: 'Roboto','Helvetica','Arial',sans-serif !important; font-size: 14px; color: #333 !important;" onclick="fLocalListarNovidades();""><i class="material-icons" role="presentation">notifications</i>Novidades
+
+                    <i class="menu-opcoes-alert">2</i>
+
+                    </a>
+
+                    <a class="menu-opcoes" style="cursor: pointer; font-family: 'Roboto','Helvetica','Arial',sans-serif !important; font-size: 14px; color: #333 !important;" onclick="fLocalListarProjetos();"><i class="material-icons" role="presentation">assignment</i>Projetos</a>
+
+                    <!--
+                    <a class="menu-opcoes" style="cursor: pointer;" ><i class="material-icons" role="presentation">chat_bubble</i>Contato</a>-->
+
+
+<!--
+
+                    <a class="menu-opcoes" style="cursor: pointer;" onclick="fLocalListarNovidades();" class="mdl-navigation__link">
+                        <table width="100%" >
+                          <tr>
+                            <td width="1%"><i class="material-icons" style="margin-right: 15px;">notifications</i></td>
+                            <td width="100%"> Novidades </td>
+                            <td width="1%">
+                              <div class="alert-quantidade"> 99 </div>
+                            </td>
+                          </tr>
+                        </table>
+                    </a>  
+
+                    <a class="menu-opcoes" style="cursor: pointer;" onclick="fLocalListarProjetos();" class="mdl-navigation__link">
+                        <table width="100%">
+                          <tr>
+                            <td width="1%"><i class="material-icons" style="margin-right: 15px;">assignment</i></td>
+                            <td width="100%"> Projetos </td> 
+                          </tr>
+                        </table>
+                    </a>  
+
+                     <a class="menu-opcoes" style="cursor: pointer;" class="mdl-navigation__link">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="1%" style="vertical-align: middle !important;"><i class="material-icons" style="margin-right: 15px;">chat_bubble</i></td>
+                            <td width="100%" > Contato </td> 
+                          </tr>
+                        </table>
+                    </a> 
+-->
+                 
+
+                </nav>
+            </div>
+
+            <!-- Campanhas -->
+            <main class="mdl-layout__content" style="background-color: #EEE !important;">
+            
+                <div class="classUsuario" ></div>
+                <div class="classFeed" ></div>
+                <div class="classCampanha" ></div>
+                <div class="classFases" ></div>
+                <div class="classCadastrarProjeto" ></div>
+              
+            </main>
+        </div>
+
+    </body>
+</html>

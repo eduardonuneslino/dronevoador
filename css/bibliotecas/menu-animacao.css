@@ -1,0 +1,69 @@
+
+.nav-menu-opcoes{
+  border-top: solid 1px #EEE;
+}
+
+.menu-opcoes-alert{
+  margin-left: 50px;
+  background-color: #F44336;
+  color: white;
+  border-radius: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-style: normal;
+  font-size:0.8rem;
+  font-weight: normal !important;
+  font-family: 'Roboto','Helvetica','Arial',sans-serif !important;
+
+}
+
+
+.menu-opcoes {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  padding: 16px;
+  color: #444;
+  font-weight: bold;
+}
+
+.menu-opcoes:hover, .menu-opcoes:focus, .menu-opcoes:active {
+  background-color: #FF6600;
+  color: white;
+  font-weight: bold;
+}
+
+
+.menu-opcoes {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(60, 60, 60, 1);
+  font-weight: 500;
+
+}
+
+.menu-opcoes:hover {
+  background-color: #EEE;
+  color: rgba(30, 30, 30, 1);
+}
+
+.menu-opcoes .material-icons{
+  font-size: 24px;
+  color: rgba(90, 90, 90, 1);
+  margin-right: 32px;
+  
+}

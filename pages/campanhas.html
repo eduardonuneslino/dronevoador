@@ -1,0 +1,370 @@
+
+<style type="text/css">
+ 
+
+.list-wrapper {
+  width: 350px;
+}
+.list-wrapper .list-item-wrapper {
+  width: 350px;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.list-wrapper .list-item-wrapper .list-item {
+  box-sizing: border-box;
+  width: 350px;
+  height: 100%;
+  font-family: Avenir;
+  background: deepskyblue;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: white;
+  cursor: pointer;
+}
+.list-wrapper .list-item-wrapper .list-item .close-button {
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: lighter;
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+}
+.list-wrapper .list-item-wrapper .list-item .list-item-content {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.list-wrapper .list-item-wrapper .list-item .list-item-content .list-image {
+  display: block;
+  width: 100%;
+  max-height: 100px;
+  margin-bottom: 5px;
+}
+.list-wrapper .list-item-wrapper .list-item .list-item-content .list-title {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+}
+.list-wrapper .list-item-wrapper .list-item .list-item-content .list-description {
+  padding: 0px 10px;
+  text-align: justify;
+}
+.list-wrapper .list-item-wrapper .list-item.hide-content .list-item-content {
+  opacity: 0;
+}
+.list-wrapper .list-item-wrapper .list-item.open .close-button {
+  display: block;
+}
+
+.participantes{
+  padding: 0px !important;
+}
+
+
+</style>
+
+
+<div>
+
+
+    <div style="float: left;" class="card-proxima">
+        <div class="list-wrapper">
+          <div class="list-item-wrapper">
+              <div class="list-item">
+                <div class="close-button">X</div>
+                <div class="list-item-content card-corpo">
+
+                  
+                    <img class="list-image" src="images/campanha.png"></img>
+                    
+
+                    <h1 class="list-title">
+                    <table width="100%">
+                      <tr>
+                        <td width="99%">
+                          Projeto IV 
+                        </td>
+                        <td width="1%">
+                         <i class="material-icons" title="Ativo">edit</i>
+                        </td>
+                      </tr>
+                    </table>
+                      
+
+                      </h1>
+                   
+                      <div>
+                        <table width="100%">
+                          
+                          <tr>
+                            <td>
+                                <center>
+                                   <label style='font-size: 22px; font-family: "Roboto","Helvetica","Arial",sans-serif;'>Participantes</label>
+                                </center>
+                                 
+                                  <ul class="demo-list-two mdl-list participantes">
+                                      <li class="mdl-list__item mdl-list__item--two-line">
+                                        <span class="mdl-list__item-primary-content">
+                                          <i class="mdl-list__item-avatar">
+                                              <img src="images/participante1.png">
+                                          </i>
+                                          <span>Participante 1</span>
+                                          <span class="mdl-list__item-sub-title">participante1@pucpr.br</span>
+                                        </span>
+                                        <span class="mdl-list__item-secondary-content" style="text-align: center;">
+                                          <table>
+                                          
+                                            <tr>
+                                              <td>
+                                                <i class="material-icons" title="Ativo">check_circle</i>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </span>
+                                      </li>
+                                  </ul>
+
+                                   <ul class="demo-list-two mdl-list participantes">
+                                      <li class="mdl-list__item mdl-list__item--two-line">
+                                        <span class="mdl-list__item-primary-content">
+                                          <i class="mdl-list__item-avatar">
+                                              <img src="images/participante2.png">
+                                          </i>
+                                          <span>Participante 2</span>
+                                          <span class="mdl-list__item-sub-title">participante2@pucpr.br</span>
+                                        </span>
+                                        <span class="mdl-list__item-secondary-content" style="text-align: center;">
+                                          <table>
+                                            
+                                            <tr>
+                                              <td>
+                                                <i class="material-icons" title="Pendente">warning</i>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </span>
+                                      </li>
+                                  </ul>
+
+                            </td>
+                          </tr>
+
+                           <tr>
+                            <td>
+                                <center>
+                                   <label style='font-size: 22px; font-family: "Roboto","Helvetica","Arial",sans-serif;'>Mentor</label>
+                                </center>
+                                 
+                                  <ul class="demo-list-two mdl-list participantes">
+                                      <li class="mdl-list__item mdl-list__item--two-line">
+                                        <span class="mdl-list__item-primary-content">
+                                          <i class="mdl-list__item-avatar">
+                                              <img src="images/mentor.png">
+                                          </i>
+                                          <span>Mentor</span>
+                                          <span class="mdl-list__item-sub-title">mentor@pucpr.br</span>
+                                        </span>
+                                        <span class="mdl-list__item-secondary-content" style="text-align: center;">
+                                          <table>
+                                          
+                                            <tr>
+                                              <td>
+                                                <i class="material-icons" title="Ativo">check_circle</i>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </span>
+                                      </li>
+                                  </ul>
+
+                                
+
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td style="padding-top: 10px;">
+                            <center>
+                              <img src="images/chart.png" width="100">
+                            </center>
+                               
+                            </td>
+                          </tr>
+                        </table>
+
+                       
+                          
+                      </div>
+                      
+                  
+                
+
+
+
+                </div>
+              </div>
+              <div style="width: 100%; background-color: #FF6600; height: 40px; cursor: pointer;">
+              <table width="100%" cellspacing="7">
+                <tr>
+                  <td width="33%">
+                      <center><img src="images/radar-chart.png" width="25"></center>
+                  </td>
+                  <td width="33%">
+                      <center><img src="images/user-add.png" width="25"></center>
+                  </td>
+                  <td width="33%">
+                      <center><img src="images/icon-menu.png" width="25"></center>
+                  </td>
+                  
+                </tr>
+              </table>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+  function desktop(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == false ) {
+        return true;
+    }
+    else
+    {
+      return false;
+    }
+
+  }
+
+  $(".list-title").unbind("click");
+  $(".list-title").click(function(){
+    fLocalListarFases();
+  });
+
+  
+
+
+  if(desktop()) {
+      $(".card-corpo").css('height', '600px');
+      $(".card-proxima").css("margin-left", "10px");
+  }
+  else
+  {
+      $(".card-corpo").css('height', '600px');
+  }
+  /*
+  $('.list-title').click(function (event) {
+
+  var listItemElement = event.target.closest('.list-item');
+
+
+
+  // If the card is not already opened
+  if (!listItemElement.classList.contains('open')) {
+
+    // first hide the content
+    listItemElement.classList.add('hide-content');
+
+    //setTimeout to delay the growth of card till the content hides 
+    setTimeout(function () {
+      var dimensions = listItemElement.getBoundingClientRect();
+
+      listItemElement.style.position = 'fixed';
+      listItemElement.style.top = dimensions.top + 'px';
+      listItemElement.style.left = dimensions.left + 'px';
+      listItemElement.style.zIndex = 10;
+
+
+      if(desktop()) {
+         // listItemElement.style.transform = 'translate(' + -1 * dimensions.left + 'px, ' + -1 * (dimensions.top-50) + 'px)';
+
+         alert("desktop");
+         //$(".card-corpo").css('height', '400px');
+
+
+         $(".card-corpo").css('height', '98%');
+
+
+         setTimeout(function () {
+            $(".card-corpo").css('overflow-y', 'scroll');
+
+
+            listItemElement.style.height = '90vh';
+            listItemElement.classList.remove('hide-content');
+            listItemElement.classList.add('open');
+          }, 600);
+        
+      }
+      else
+      {
+        alert("mobile");
+        listItemElement.style.transform = 'translate(' + -1 * dimensions.left + 'px, ' + -1 * (dimensions.top-50) + 'px)';
+
+        $(".card-corpo").css('overflow-y', 'scroll');
+
+        $(".card-corpo").css('height', '98%');
+
+        setTimeout(function () {
+          listItemElement.style.width = '100vw';
+          listItemElement.style.height = '90vh';
+          listItemElement.classList.remove('hide-content');
+          listItemElement.classList.add('open');
+        }, 600);
+
+      }
+
+
+      
+
+      
+
+
+      //setTimeout to show the content back again after the card has changed sizes
+      
+    }, 200);
+  }
+});
+
+  */
+
+$('.close-button').click(function (event) {
+
+
+
+  event.stopPropagation();
+  var listItemElement = event.target.closest('.list-item');
+  listItemElement.classList.add('hide-content');
+
+  setTimeout(function () {
+    listItemElement.classList.remove('open');
+    listItemElement.style.width = '';
+    listItemElement.style.height = '';
+
+    //setTimeout
+    setTimeout(function () {
+      listItemElement.style.transform = 'translate(0px, 0px)';
+      listItemElement.style.left = "";
+      listItemElement.style.top = "";
+      listItemElement.style.position = '';
+      listItemElement.style.zIndex = 0;
+      listItemElement.classList.remove('hide-content');
+      listItemElement.classList.remove('open');
+
+
+        $(".card-corpo").css('overflow-y', '');
+      
+
+
+    }, 510);
+  }, 200);
+
+});
+</script>

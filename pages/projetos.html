@@ -1,0 +1,82 @@
+
+
+<link rel="stylesheet" type="text/css" href="../css/projetos.css">
+
+
+<link rel="stylesheet" href="../css/materializecss.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         
+<script type="text/javascript" src="../js/projetos.js"></script>
+
+<form style="display: none;">
+    <input type="hidden" id="tUsuarioEmail" name="tUsuarioEmail" />
+    <input type="hidden" id="tUsuarioDestinatario" name="tUsuarioDestinatario" />
+    <input type="hidden" id="tProjetoAtual" name="tProjetoAtual" />
+    <input type="hidden" id="tDescricaoProjetoAtual" name="tDescricaoProjetoAtual" />
+</form>
+
+<div class="parent">
+    <div class="carousel" style="position: relative;">
+        <ul class="carousel__cards">
+
+          
+
+        </ul>
+    </div>
+
+</div>
+
+
+<div id="janelaAddUser" style="display: none;">
+   
+  <div style="margin-top: 10px; font-size: 25px; margin-right: 10px;">
+      <table width="100%">
+        <tr>
+          <td width="100%">
+            Adicionar Participante
+          </td>
+          <td>
+            <img class="card-close" src="../images/card-close.png" width="40" />
+          </td>
+        </tr>
+      </table>
+  </div> 
+
+  <fieldset>
+    <legend>Envie um convite direto</legend>
+          <div class="row">
+            <div class="input-field col s8">
+                <input class="input-email" type="email" disabled="disabled" id="tEmailDestinatarioExterno" name="tEmailDestinatarioExterno" class="validate">
+                <label >E-mail</label>
+                <span class="helper-text" data-error="E-mail inválido" data-success="E-mail válido"></span>
+            </div>
+            <div class="input-field col s4">
+                <button class="btn waves-effect waves-light bConvidarParticipanteExterno">Enviar
+                 
+                </button>
+            </div>
+          </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pesquise por pessoas já cadastradas</legend>
+     <div class="row">
+            <div class="input-field col s8">
+                <input type="text" id="tEmailDestinatarioInterno" name="tEmailDestinatarioInterno" class="autocomplete">
+                <label for="autocomplete-input">Procurar E-mails</label>
+            </div>
+            <div class="input-field col s4">
+                <button class="btn waves-effect waves-light bConvidarParticipanteInterno">Enviar
+                 
+                </button>
+            </div>
+      
+      </div>
+  </fieldset>
+
+</div>
+
+
+
+
+
